@@ -29,17 +29,23 @@ class Create extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text>Name</Text>
+       <View style={styles.textinput}>
+        <Text>New Messsage :</Text>
+       </View>
+       <Button 
+          title='back' onPress={() => this.props.navigation.navigate('home') }
+        />
         <View style={styles.textinput}>
           <TextInput
+            title="Name"
             onChangeText={this._handleChangeName}
             style={styles.textinput} placeholder='Name...'
             onSubmitEditing= {() => this._create(this.name)}
           />
         </View>
-        <Text>Message</Text>
         <View style={styles.textinput}>
           <TextInput
+            title="Message"
             onChangeText={this._handleChangeMessage}
             style={styles.textinput} placeholder='Message...'
             onSubmitEditing= {() => this._create(this.message)}
@@ -54,9 +60,8 @@ class Create extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  main_container: {
-    flex : 1,
-    marginTop : 50
+  container: {
+    backgroundColor: '#F5F5F5'
   },
   textinput: {
     marginLeft: 5,
@@ -64,16 +69,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderColor: 'gray',
     borderWidth: 0,
-    paddingLeft: 5
-  },
-  loading : {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 200,
-    bottom: 0,
-    alignItems: 'center',
-    justifyContent: 'center'
+    paddingLeft: 5,
   }
 });
 

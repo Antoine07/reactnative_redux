@@ -1,11 +1,11 @@
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
-import  HOME  from '../components/Home';
-import  create  from '../components/Create';
+import  Home  from '../components/Home';
+import  Create  from '../components/Create';
 
 const MainNavigator = createStackNavigator({
-  home : { screen: HOME },
-  create : { screen: create },
+  home : { screen: Home },
+  create : { screen: Create },
   },
   {
     initialRouteName: 'home'

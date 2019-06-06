@@ -6,7 +6,7 @@ class Message extends React.Component {
 
     const { message } = this.props;
     return (
-      <View style={styles.container}>
+      <View style={styles.item}>
        <Text>Name : {message.name}</Text>
        <Text>{message.message}</Text>
       </View>
@@ -15,12 +15,11 @@ class Message extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
- 
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
   },
-  message : {
-      color : 'blue'
-  }
 });
 
 export default Message

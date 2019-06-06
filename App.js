@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
 import Navigate from './navigate/Navigate'
+import { StyleSheet, Text, View , Button} from 'react-native'
 
 // create store
 
@@ -15,19 +14,9 @@ const store = createStore(message)
 export default class App extends React.Component {
   render() {
     return (
-      <Provider store={store} >
-        <Navigate />
-        
-      </Provider>
+        <Provider store={store} >
+          <Navigate />
+        </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
